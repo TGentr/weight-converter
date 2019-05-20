@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>konwerter wagi | funt -> kg</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style>
+    body{
+        margin-top: 70px;
+        background:#333;
+        color: #fff;
+    }
+</style>
+</head>
+<body>
+   <div class="container">
+       <div class="row">
+           <div class="col-md-6">
+               <h1 class="display-4 text-center mb-3">Konwerter funty - > kilogramy</h1>
+           <form>
+               <div class="form-group">
+                   <label for=""></label>
+                   <input id="inputwaga" type="number" class="form-control form-control-lg" placeholder="wpisz">
+               </div>
+           </form>
+           <div class="output">
+               <div class="card bg-success mb-2">
+                    <div class="card-body">
+                        <h4>kilogramy:</h4>
+                        <div id="kgOutput"></div>
+                    </div>
+                </div>
+                
+           </div>
+            </div>
+       </div>
+   </div>
+
+   <script>
+   let inPut = document.querySelector("#inputwaga");
+   inPut.addEventListener('input', function(e){
+       let pounds = e.target.value;
+       document.getElementById("kgOutput").innerHTML = Math.round(pounds/2.2046 * 100) / 100;
+   })
+   </script>
+
+</body>
+</html>
